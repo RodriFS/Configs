@@ -1,0 +1,17 @@
+# Ignore everything
+/*
+
+# Config Files
+!.gitignore
+!.ackrc
+!.bash_profile
+!.p10k.zsh
+!.vimrc
+!.zshrci
+!iterm.json
+
+!.ssh
+.ssh/*
+!.ssh/config
+
+!Documents/It
