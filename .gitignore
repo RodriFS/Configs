@@ -9,9 +9,8 @@
 !.vimrc
 !.zshrci
 !iterm.json
+!README.md
 
 !.ssh
 .ssh/*
 !.ssh/config
-
-!Documents/It
