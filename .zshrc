@@ -1,3 +1,13 @@
+export PATH="$HOME/.pyenv/bin:$PATH"
+export PATH="/usr/local/bin:$PATH"
+
+export FZF_DEFAULT_COMMAND='rg --files'
+
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+export LDFLAGS="-L/usr/local/opt/zlib/lib -L/usr/local/opt/bzip2/lib"
+export CPPFLAGS="-I/usr/local/opt/zlib/include -I/usr/local/opt/bzip2/include"
+
 alias csdev='git checkout develop && git pull && npm i && npm run dev'
 alias csqa='git checkout release && git pull && npm i && npm run dev'
 alias cmpdev='git checkout develop && git pull && npm i && npm start'
@@ -6,6 +16,10 @@ alias soup="cd ~/Documents/Github/SoupGB"
 
 export PATH="/Users/rodrifs/Documents/build-tools:$PATH"
 export PATH="/Users/rodrifs/Documents/mongodb/bin:$PATH"
+
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
 
 export PATH="$HOME/.cargo/bin:$PATH"
 
