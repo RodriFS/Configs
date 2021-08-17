@@ -1,5 +1,8 @@
 export PATH="/usr/local/bin:$PATH"
 
+export DENO_INSTALL="/Users/rodrifs/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
+
 export FZF_DEFAULT_COMMAND='rg --files'
 
 export LDFLAGS="-L/usr/local/opt/zlib/lib -L/usr/local/opt/bzip2/lib"
@@ -10,6 +13,7 @@ alias csqa='git checkout release && git pull && npm i && npm run dev'
 alias cmpdev='git checkout develop && git pull && npm i && npm start'
 alias cmpqa='git checkout release && git pull && npm i && npm start'
 alias soup="cd ~/Documents/Github/SoupGB"
+alias caf="caffeinate -dimus"
 
 export PATH="/Users/rodrifs/Documents/build-tools:$PATH"
 export PATH="/Users/rodrifs/Documents/mongodb/bin:$PATH"
