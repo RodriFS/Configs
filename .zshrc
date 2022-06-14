@@ -1,4 +1,13 @@
+export CI_JOB_TOKEN=yczeh5Q2ypVXn9d-xxjA
+export PATH="/Users/rodrifs/.nvm/versions/node/v12.20.1/bin/:$PATH"
 export PATH="/usr/local/bin:$PATH"
+export PATH="/Applications/Racket v8.1/bin:$PATH"
+export PATH="/Users/rodrifs/Documents/Github/mm/target/debug:$PATH"
+export PATH="/Users/rodrifs/Documents/arm-unknown-linux-gnueabi/bin:$PATH"
+export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
+export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
+export JAVA_HOME=`/usr/libexec/java_home -v 11`
 
 export DENO_INSTALL="/Users/rodrifs/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
@@ -14,6 +23,7 @@ alias cmpdev='git checkout develop && git pull && npm i && npm start'
 alias cmpqa='git checkout release && git pull && npm i && npm start'
 alias soup="cd ~/Documents/Github/SoupGB"
 alias caf="caffeinate -dimus"
+alias aedit="/Users/rodrifs/Documents/Github/cms_deploy_manager/scripts/edit_file.sh"
 
 export PATH="/Users/rodrifs/Documents/build-tools:$PATH"
 export PATH="/Users/rodrifs/Documents/mongodb/bin:$PATH"
@@ -134,3 +144,8 @@ source $ZSH/oh-my-zsh.sh
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+[ -f "/Users/rodrifs/.ghcup/env" ] && source "/Users/rodrifs/.ghcup/env" # ghcup-env
+
+# tabtab source for electron-forge package
+# uninstall by removing these lines or running `tabtab uninstall electron-forge`
+[[ -f /Users/rodrifs/.nvm/versions/node/v12.20.1/lib/node_modules/electron-forge/node_modules/tabtab/.completions/electron-forge.zsh ]] && . /Users/rodrifs/.nvm/versions/node/v12.20.1/lib/node_modules/electron-forge/node_modules/tabtab/.completions/electron-forge.zsh
