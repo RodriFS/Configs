@@ -1,5 +1,8 @@
+export CLICOLOR=1
 export CI_JOB_TOKEN=yczeh5Q2ypVXn9d-xxjA
-export PATH="/Users/rodrifs/.nvm/versions/node/v12.20.1/bin/:$PATH"
+export NVM_DIR="$HOME/.nvm"
+  [ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 export PATH="/usr/local/bin:$PATH"
 export PATH="/Applications/Racket v8.1/bin:$PATH"
 export PATH="/Users/rodrifs/Documents/Github/mm/target/debug:$PATH"
@@ -8,6 +11,13 @@ export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
 export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
 export JAVA_HOME=`/usr/libexec/java_home -v 11`
+
+jdk() {
+      version=$1
+      unset JAVA_HOME;
+      export JAVA_HOME=$(/usr/libexec/java_home -v"$version");
+      java -version
+}
 
 export DENO_INSTALL="/Users/rodrifs/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
@@ -35,10 +45,6 @@ fi
 export PATH="$HOME/.cargo/bin:$PATH"
 
 export PS1="\u@\h \W\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ "
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # Th
 
 alias mongod='mongod --dbpath ~/data/db'
 # If you come from bash you might have to change your $PATH.

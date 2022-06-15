@@ -208,26 +208,26 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 """"""""""""""""" Plugins Config """"""""""""""""""""
 
 
-call vundle#begin()
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'morhetz/gruvbox'
-Plugin 'preservim/nerdtree' 
-Plugin 'preservim/nerdcommenter'
-Plugin 'tmhedberg/SimpylFold'
-Plugin 'vim-syntastic/syntastic'
-Plugin 'nvie/vim-flake8'
-Plugin 'leafgarland/typescript-vim'
-Plugin 'vim-airline/vim-airline'
-Plugin 'jelera/vim-javascript-syntax'
-Plugin 'mileszs/ack.vim'
-Plugin 'alx741/vim-rustfmt'
-Plugin 'junegunn/fzf'
-Plugin 'Vimjas/vim-python-pep8-indent'
-"Plugin 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
-Plugin 'peitalin/vim-jsx-typescript'
-Plugin 'joshdick/onedark.vim'
-Plugin 'ryanoasis/vim-devicons'
-call vundle#end()            " required
+call plug#begin()
+Plug 'morhetz/gruvbox'
+Plug 'preservim/nerdtree' 
+Plug 'preservim/nerdcommenter'
+Plug 'tmhedberg/SimpylFold'
+Plug 'vim-syntastic/syntastic'
+Plug 'nvie/vim-flake8'
+Plug 'leafgarland/typescript-vim'
+Plug 'vim-airline/vim-airline'
+Plug 'jelera/vim-javascript-syntax'
+Plug 'mileszs/ack.vim'
+Plug 'alx741/vim-rustfmt'
+Plug 'junegunn/fzf'
+Plug 'Vimjas/vim-python-pep8-indent'
+"Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
+Plug 'peitalin/vim-jsx-typescript'
+Plug 'joshdick/onedark.vim'
+Plug 'ryanoasis/vim-devicons'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+call plug#end()            " required
 
 filetype plugin indent on    " required
 set splitright
