@@ -28,6 +28,9 @@ map <C-_> <Plug>NERDCommenterToggle
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 
 "set path+=**
+set whichwrap+=<,>,h,l
+set textwidth=120
+set colorcolumn=120
 set nocompatible        " Use Vim settings, rather than Vi settings
 set softtabstop=2       " Indent by 2 spaces when hitting tab”
 set shiftwidth=4        " Indent by 4 spaces when auto-indenting
