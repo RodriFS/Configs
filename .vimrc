@@ -107,7 +107,9 @@ endif
 
 let mapleader="º"
 nnoremap <leader> <Nop>
-nnoremap <leader>f :<C-u>FZF<CR>
+
+" Clear current search highlights
+nnoremap <silent> <leader><Space> :nohlsearch<CR>
 
 " Move half a screen
 nnoremap jn <C-d>
