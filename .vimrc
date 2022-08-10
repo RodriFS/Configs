@@ -27,11 +27,12 @@ set showmatch "When a bracket is inserted, briefly jump to the matching one
 set sidescrolloff=5 "The minimal number of screen columns to keep to the left and to the right of the cursor if 'nowrap' is set
 set termguicolors "uses 24-bit color
 set updatetime=250 "If this many milliseconds nothing is typed the swap file will written to disk
-set wildmenu "command-line completion operates in an mode
+set wildmenu "Display command line’s tab complete options as a menu
 set colorcolumn=116 "Highlights screen column
-set laststatus=2 "show status line
 set title "Show title of window
 set relativenumber
+set noerrorbells "Disable beep on errors
+set visualbell "Flash the screen instead of beeping on errors.
 
 if has("patch-8.1.1564")
   " Recently vim can merge signcolumn and number column into one
@@ -44,9 +45,12 @@ endif
 " INDENTATION
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-set autoindent "Enables auto indentation
-set expandtab "Expands tabs to spaces
+set autoindent "New lines inherit the indentation of previous lines
+set expandtab "Convert tabs to spaces
+set shiftround "When shifting lines, round the indentation to the nearest multiple of `shiftwidth`
 set shiftwidth=2 "Number of spaces to use for indentation
+set smarttab "Insert `tabstop` number of spaces when the `tab` key is pressed
+set tabstop=4 "Indent using four spaces
 let &softtabstop=&shiftwidth "Number of spaces that a tab counts for
 
 filetype plugin indent on "Activates indentation for different file types
@@ -73,6 +77,14 @@ match ErrorMsg /\s\+$/ "Highlight trailing whitespace
 syntax on
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" CODE FOLDING
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+set foldmethod=indent "Fold based on indention levels
+set foldnestmax=3 "Only fold up to three nested levels
+set nofoldenable "Disable folding by default
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " DIRECTORIES
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -83,12 +95,11 @@ set wildignore+=**/site-packages/**
 set wildignore+=**/node_modules/**
 set wildignore+=**/dist/**
 
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " MISCELLANEOUS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-set nocompatible        " Use Vim settings, rather than Vi settings
+set nocompatible "Use Vim settings, rather than Vi settings
 set confirm "Certain operations will raise a confirm dialog
 set grepprg=rg\ --vimgrep\ --smart-case\ --follow "Program to use for :grep command
 set shell=zsh "Shell
@@ -133,12 +144,14 @@ nnoremap <silent> <C-Right> :vertical resize +5<CR>
 nnoremap <silent> j gj
 nnoremap <silent> k gk
 " Move visual selection
-nnoremap <silent> <leader><down> :m +1<CR>gv=gv
-nnoremap <silent> <leader><up> :m -2<CR>gv=gv
+nnoremap <silent> <leader><down> :m +1<CR>==
+nnoremap <silent> <leader><up> :m -2<CR>==
 xnoremap <silent> <leader><down> :m '<+1<CR>gv=gv
 xnoremap <silent> <leader><up> :m '>-2<CR>gv=gv
 " Make . work with visually selected lines
 xnoremap <silent> . :normal.<CR>
+" Closes file in buffer without removing split
+nnoremap ,d :b#<bar>bd#<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " PLUGINS
@@ -155,6 +168,7 @@ call plug#begin()
   Plug 'ryanoasis/vim-devicons'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'tpope/vim-fugitive'
+  Plug 'airblade/vim-gitgutter'
   Plug 'sheerun/vim-polyglot'
 call plug#end()
 
