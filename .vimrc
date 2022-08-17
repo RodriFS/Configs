@@ -140,9 +140,6 @@ nnoremap <silent> <C-Left> :vertical resize -5<CR>
 nnoremap <silent> <C-Down> :resize +5<CR>
 nnoremap <silent> <C-Up> :resize -5<CR>
 nnoremap <silent> <C-Right> :vertical resize +5<CR>
-" Move cursor vertically by visual line
-nnoremap <silent> j gj
-nnoremap <silent> k gk
 " Move visual selection
 nnoremap <silent> <leader><down> :m +1<CR>==
 nnoremap <silent> <leader><up> :m -2<CR>==
@@ -168,8 +165,8 @@ call plug#begin()
   Plug 'ryanoasis/vim-devicons'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'tpope/vim-fugitive'
-  Plug 'airblade/vim-gitgutter'
   Plug 'sheerun/vim-polyglot'
+  Plug 'puremourning/vimspector'
 call plug#end()
 
 colorscheme gruvbox
@@ -178,3 +175,5 @@ source $HOME/_configs/coc.vim
 source $HOME/_configs/airline.vim
 source $HOME/_configs/nerd.vim
 source $HOME/_configs/fzf.vim
+
+let g:vimspector_enable_mappings = 'VISUAL_STUDIO'
