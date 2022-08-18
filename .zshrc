@@ -10,7 +10,7 @@ export PATH="$HOME/Documents/arm-unknown-linux-gnueabi/bin:$PATH"
 export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
 export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
-export JAVA_HOME=`/usr/libexec/java_home -v 11`
+# export JAVA_HOME=`/usr/libexec/java_home -v 11`
 
 jdk() {
       version=$1
@@ -52,7 +52,6 @@ alias mongod='mongod --dbpath ~/data/db'
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
->>>>>>> 7ece432 (Made .zshrc more generic)
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
