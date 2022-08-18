@@ -171,9 +171,9 @@ call plug#end()
 
 colorscheme gruvbox
 
-source $HOME/_configs/coc.vim
-source $HOME/_configs/airline.vim
-source $HOME/_configs/nerd.vim
-source $HOME/_configs/fzf.vim
+source $HOME/.vim/configs/coc.vim
+source $HOME/.vim/configs/airline.vim
+source $HOME/.vim/configs/nerd.vim
+source $HOME/.vim/configs/fzf.vim
 
 let g:vimspector_enable_mappings = 'VISUAL_STUDIO'

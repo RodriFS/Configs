@@ -15,4 +15,5 @@
 !.ssh
 .ssh/*
 !.ssh/config
-!_configs
+!.vim/configs
+!.vim/autoload/Plug.vim

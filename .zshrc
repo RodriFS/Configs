@@ -5,8 +5,8 @@ export NVM_DIR="$HOME/.nvm"
   [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 export PATH="/usr/local/bin:$PATH"
 export PATH="/Applications/Racket v8.1/bin:$PATH"
-export PATH="/Users/rodrifs/Documents/Github/mm/target/debug:$PATH"
-export PATH="/Users/rodrifs/Documents/arm-unknown-linux-gnueabi/bin:$PATH"
+export PATH="$HOME/Documents/Github/mm/target/debug:$PATH"
+export PATH="$HOME/Documents/arm-unknown-linux-gnueabi/bin:$PATH"
 export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
 export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
@@ -19,7 +19,7 @@ jdk() {
       java -version
 }
 
-export DENO_INSTALL="/Users/rodrifs/.deno"
+export DENO_INSTALL="$HOME/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 
 export FZF_DEFAULT_COMMAND='rg --files'
@@ -33,10 +33,10 @@ alias cmpdev='git checkout develop && git pull && npm i && npm start'
 alias cmpqa='git checkout release && git pull && npm i && npm start'
 alias soup="cd ~/Documents/Github/SoupGB"
 alias caf="caffeinate -dimus"
-alias aedit="/Users/rodrifs/Documents/Github/cms_deploy_manager/scripts/edit_file.sh"
+alias aedit="$HOME/Documents/Github/cms_deploy_manager/scripts/edit_file.sh"
 
-export PATH="/Users/rodrifs/Documents/build-tools:$PATH"
-export PATH="/Users/rodrifs/Documents/mongodb/bin:$PATH"
+export PATH="$HOME/Documents/build-tools:$PATH"
+export PATH="$HOME/Documents/mongodb/bin:$PATH"
 
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
@@ -51,7 +51,8 @@ alias mongod='mongod --dbpath ~/data/db'
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/rodrifs/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
+>>>>>>> 7ece432 (Made .zshrc more generic)
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -150,8 +151,4 @@ source $ZSH/oh-my-zsh.sh
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-[ -f "/Users/rodrifs/.ghcup/env" ] && source "/Users/rodrifs/.ghcup/env" # ghcup-env
-
-# tabtab source for electron-forge package
-# uninstall by removing these lines or running `tabtab uninstall electron-forge`
-[[ -f /Users/rodrifs/.nvm/versions/node/v12.20.1/lib/node_modules/electron-forge/node_modules/tabtab/.completions/electron-forge.zsh ]] && . /Users/rodrifs/.nvm/versions/node/v12.20.1/lib/node_modules/electron-forge/node_modules/tabtab/.completions/electron-forge.zsh
+[ -f "$HOME/.ghcup/env" ] && source "$HOME/.ghcup/env" # ghcup-env
