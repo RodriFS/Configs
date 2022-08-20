@@ -1,5 +1,7 @@
 #!/bin/zsh
 
+xcode-select --install
+
 # Configure git
 git config --global pull.rebase true
 git config --global init.defaultBranch main
@@ -35,7 +37,10 @@ mkdir .vim/undodir
 
 # Update vim
 brew install vim
-vim +PlugInstall +qall
+vim +PlugInstall +qal
+
+# install rg
+brew install rg
 
 # Install Iterm2
 open https://iterm2.com/downloads.html

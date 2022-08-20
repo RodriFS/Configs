@@ -118,6 +118,11 @@ endif
 
 let mapleader="º"
 nnoremap <leader> <Nop>
+" Disable arrows
+" map <Up> <Nop>
+" map <Down> <Nop>
+" map <Left> <Nop>
+" map <Right> <Nop>
 
 " Clear current search highlights
 nnoremap <silent> <leader><Space> :nohlsearch<CR>
