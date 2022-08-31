@@ -1,3 +1,3 @@
-nnoremap <silent> b/ :Buffers<CR>
-nnoremap <silent> f/ :Files<CR>
-nnoremap <silent> c/ :Rg<CR>
+nnoremap <silent> <leader>b/ :Buffers<CR>
+nnoremap <silent> <leader>f/ :Files<CR>
+nnoremap <silent> <leader>c/ :Rg<CR>
