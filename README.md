@@ -23,6 +23,9 @@
 1. paste the content of `.ssh` into `~/.ssh`
 2. download an paste the private keys `id_rsa` and `id_rsa_work` into `~/.ssh`
 
+### Tools
+1. https://github.com/rupa/z (clone to ~/)
+
 ### Others
 1. Install pyenv for multiple python versions with `brew install pyenv`
    - `pyenv install --list` to check the version you want to install
