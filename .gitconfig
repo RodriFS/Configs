@@ -1,0 +1,81 @@
+[column]
+  ui = auto
+[branch]
+  sort = -commiterdate
+[tag]
+  sort = version:refname
+[init]
+  defaultBranch = main
+[help]
+  autocorrect = prompt
+[credential]
+	helper = osxkeychain
+[user]
+	name = Rodrigo
+	email = 39995243+RodriFS@users.noreply.github.com
+[pull]
+	rebase = true
+[rebase]
+  autoSquash = true
+  autoStash = true
+  updateRefs = true
+[rerere]
+	enabled = true
+	autoupdate = true
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+[core]
+	pager = delta
+	editor = nvim
+	excludefile = ~/.gitignore
+	fsmonitor = true
+	untrackedCache = true
+[push]
+	autoSetupRemote = true
+[merge]
+	conflictstyle = zdiff3
+[alias]
+	dsf = diff --color
+	unstage = restore --unstaged --
+[pager]
+	dsf = diff-so-fancy | less --tabs=4
+[interactive]
+	diffFilter = delta --color-only
+[color]
+	ui = true
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+[color "diff"]
+	meta = 11
+	frag = magenta bold
+	func = 146 bold
+	commit = yellow bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
+[delta]
+    navigate = true    # use n and N to move between diff sections
+	side-by-side = true
+
+    # delta detects terminal colors automatically; set one of these to disable auto-detection
+    # dark = true
+    # light = true
+[diff]
+    colorMoved = plain
+    algorithm = histogram
+    mnemonicPrefix = true
+    renames = true
+[credential "https://github.com"]
+	helper =
+	helper = !/opt/homebrew/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper =
+	helper = !/opt/homebrew/bin/gh auth git-credential
